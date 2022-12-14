@@ -1,0 +1,30 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_popup": "index.html",
+      "default_title": "Open the popup"
+   },
+   "content_scripts": [ {
+      "js": [ "content.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   }, {
+      "js": [ "content2.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Install Sound Booster extension to increase the volume up to 400%",
+   "icons": {
+      "128": "icon 128.png",
+      "16": "icon 16.png",
+      "64": "icon 64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo+Fi+JQlvm71rhNa39iuH5zgosxskomAiVxxn+kkEOCBIWU6TEauiwHixD9/fNXyVSmbL649HMEfbu7rIeCq9kZ4h3sk+WQ9TIjiMk5jI8lSL3kmqT++U8lNDsF6EwcBJC9NNn6T5qOTPL619AmcaO6FSRQr0Y2hlIwBszs+r98F+GTSKvocfmEidiM3yUniYnmPAS9DPSJBXrkg0+ZFmoB6owSHxW+bUZUFWM5uYOnB59SUmF79j+sk6rYcl3JJ3JDGB9TaN2HveY/sMzNbTeXUDK/zx56ujUmyyxyDDa0MZT66lEyRUb/q5IrX8h4FlpA076vNYH56eK6GwR4BvwIDAQAB",
+   "manifest_version": 2,
+   "name": "Sound Booster",
+   "permissions": [ "tabs", "tabCapture", "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.0.3",
+   "web_accessible_resources": [ "public/*" ]
+}
